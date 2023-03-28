@@ -1,0 +1,43 @@
+.AboutFram{
+    display: flex;
+  }
+  .AboutFram >p{
+    width: 50%;
+
+  }
+  /* .video{
+    overflow-y: hidden;
+  } */
+.buttons{
+    justify-content: center;
+    
+}
+ .buttons{
+    width: 400px;
+    height: 200px;
+    margin:10px;
+    background-color:#0a0a23;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:50px; 
+    min-width: 400px;
+  }
+
+  .aboutcontainer{
+    height: 150vh;
+    /* justify-content: center;
+    text-align: center; */
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(126,213,111,0.8),
+        rgba(100, 136, 87, 0.802)),
+        url(../assets/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    /* position: relative; */
+    clip-path: polygon(0 0,100% 0,100% 120vh,0 100%);
+    overflow-x: hidden;
+  }
+  

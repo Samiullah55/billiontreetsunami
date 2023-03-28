@@ -1,0 +1,19 @@
+.button {
+    /* position:absolute; */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    background-color:#0a0a23;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:50px; 
+    
+    transform: translateX(10px);
+  }
+  .regions{
+    display: block;
+    width: 100vh;
+  }
