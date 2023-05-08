@@ -101,7 +101,7 @@ const UserSchema = new mongoose.Schema({
 //creating model of the schema for making class from the schema
 const User=mongoose.model("User",UserSchema);
 
-const PORT=5000;
+const PORT=process.env.PORT || 5000;
 
 server.get('/s3Url',async(req,res)=>{
   const url=await generateUploadURL();
@@ -141,6 +141,14 @@ server.get("/demo",async(req,res)=>{
     //const locationdocs=await Location.find({});
     res.json(userdocs);
 })
+
+if(procese.env.NODE_ENV=="production"){
+  server.use(express.static("frontend/build"));
+  const path=require("path");
+  server.get("*",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"frontend","build","index.html"));
+  })
+}
 
 //server
 server.listen(PORT,()=>{
