@@ -142,13 +142,7 @@ server.get("/demo",async(req,res)=>{
     res.json(userdocs);
 })
 
-if(procese.env.NODE_ENV=="production"){
-  server.use(express.static("frontend/build"));
-  const path=require("path");
-  server.get("*",(req,res)=>{
-    res.sendFile(path.resolve(__dirname,"frontend","build","index.html"));
-  })
-}
+
 
 //server
 server.listen(PORT,()=>{
